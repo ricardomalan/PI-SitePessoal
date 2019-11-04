@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+}
+.logo{
+    height: 100vh;
+}
+.bola {
+    position: absolute;
+    border-radius: 50%;
+    display: inline-block;
+    height: 1.4vh;
+    width: 8px;
+    background-color: rgb(188, 255, 255);
+    top: 19.3vh;
+    left: 52.7%;
+}
+
+.popup-container {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: none;
+    justify-content: center; /*alinhamento horizontal */
+    align-items: center; /*alinhamento vertical */
+}
+.popup-container.mostrar {
+    display: flex;
+}
+.popup {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    background: whitesmoke;
+    width: 60%;
+    min-width: 300px; /* minimo de largura quando diminuir a tela */
+    padding: 40px;
+    border: 10px solid rgb(51, 168, 157);
+    box-shadow: 0 0 0 10px whitesmoke; /* borda em cima de borda */
+    color: black;
+    position: relative;
+}
+.mostrar .popup {
+    animation: pop .5s;
+}
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0); /* eixo x / eixo y / 3d */
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.popup span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: solid .5px rgb(0, 255, 255);
+    background-color: #9bf3ff;
+}
+.fechar {
+    position: absolute;
+    font-size: 20pt;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid whitesmoke;
+    background: rgb(51, 168, 157);
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer; /* mostrar que algo é clicavel pois o cursor muda para uma mãozinha */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}

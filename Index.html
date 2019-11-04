@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favconMind.png" >
+    <link rel="stylesheet" href="style-popup.css">
+    <title>MindseTech</title>
+</head>
+<body>
+    <a href="" class="bola"></a>
+    <center><img src="Mind.jpg" class="logo"></center>
+
+    <div id="popup-inicio" class="popup-container">
+        <div class="popup">
+            <button class="fechar">x</button>
+            <center><h1>Olá</h1>
+            <p>Para visualizar o conteúdo do MindsetTech <br>
+            primeiramente você precisa encontrar <br>
+            o ponto neural <span></span> no logo que é clicável e clicar <br>
+            assim conseguirá acessar todo o conteúdo!</p></center>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function iniciaPopup(popupID){
+    const popup = document.getElementById(popupID) // const mesma coisa que var só que não pode mudar depois
+    popup.classList.add('mostrar');
+    popup.addEventListener('click', (e) => { // => 'arrow function, forma abreviada de function'
+        if(e.target.id == popupID || e.target.className == 'fechar') { //'target' mostra exatamente onde está clicando
+            popup.classList.remove('mostrar');
+        } 
+    });
+    }
+
+    iniciaPopup('popup-inicio'); 
+</script>
