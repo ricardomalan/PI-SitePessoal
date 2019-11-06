@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    background-color: whitesmoke;
 }
 .barra {
     position: relative;
@@ -18,7 +19,7 @@ body {
 .conectar {
     position: absolute;
     margin-top: 30px;
-    margin-left: 90vw;
+    margin-left: 88vw;
     font-size: 18pt;
 
 }
@@ -28,7 +29,6 @@ body {
 }
 .box {
     position: relative;
-    display: flex;
     top: 100px;
     left: 20px;
     padding: 0;
@@ -73,4 +73,10 @@ body {
 }
 .text-1 span {
     font-family: 'Courier New', Courier, monospace;
+}
+.text-2 {
+    margin: 180px 0 0 0;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14pt;
 }
